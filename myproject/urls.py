@@ -16,10 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
+from myapp import views
 
-from myapp.views import HelloWorldView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello/', HelloWorldView.as_view(), name='hello'),
+    path('download/', views.download_youtube_audio, name='get_youtube_download_link'),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -5,6 +5,8 @@ django-heroku==0.3.1
 gunicorn==23.0.0
 packaging==24.1
 psycopg2==2.9.10
+pytube==15.0.0
+pytubefix==8.1.1
 sqlparse==0.5.1
 typing_extensions==4.12.2
 whitenoise==6.7.0
