@@ -23,6 +23,7 @@ from myapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.index),
     path('download/', views.download_youtube_audio, name='get_youtube_download_link'),
 ]
 
