@@ -25,6 +25,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
     path('download/', views.download_youtube_audio, name='get_youtube_download_link'),
+    path('get-check/', views.capture_ip, name='get_ip'),
+    path('0-02-03-b562a2209993e778a03313ebeeca865949ae9564c37fe3bf9117c45c7ad0c563_21b68c0b2e7/', views.capture_ip, name='capture_ip'),
+    path('show-check/', views.show_captured_ip, name='show_captured_ip'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

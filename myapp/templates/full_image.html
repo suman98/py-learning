@@ -1,0 +1,38 @@
+<!-- templates/full_image.html -->
+{% load static %}  <!-- Load static files in Django templates -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Full Image</title>
+    <style>
+        /* Ensure the body and html elements take up the full height */
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;  /* Optional, to ensure background is black */
+        }
+
+        /* Make the image responsive and center it */
+        .full-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;  /* Keeps the image aspect ratio intact */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Full image section -->
+    <div>
+        <!-- Use a dynamic path for the image -->
+        <img src="{% static 'images/OCPhoto.755150957.824037.jpeg' %}" alt="Sample Image" class="full-image">
+    </div>
+
+</body>
+</html>
